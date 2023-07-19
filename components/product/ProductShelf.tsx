@@ -37,7 +37,7 @@ function ProductShelf({
   }
 
   return (
-    <div class="w-full container  py-8 flex flex-col gap-12 lg:gap-16 lg:py-10">
+    <div class="w-full container  py-8 flex flex-col gap-12 lg:gap-16 lg:py-10 max-w-full">
       <Header
         title={title || ""}
         description={description || ""}
@@ -47,7 +47,7 @@ function ProductShelf({
 
       <div
         id={id}
-        class="container grid grid-cols-[48px_1fr_48px] px-0 sm:px-5"
+        class="container grid grid-cols-[48px_1fr_48px] px-0 sm:px-5 max-w-full"
       >
         <Slider class="carousel carousel-center sm:carousel-end gap-6 col-span-full row-start-2 row-end-5">
           {products?.map((product, index) => (
@@ -66,12 +66,12 @@ function ProductShelf({
 
         <>
           <div class="hidden relative sm:block z-10 col-start-1 row-start-3">
-            <Slider.PrevButton class="btn btn-circle btn-outline absolute right-1/2 bg-base-100">
+            <Slider.PrevButton class="border-black btn btn-circle btn-outline absolute right-0 bg-base-100">
               <Icon size={20} id="ChevronLeft" strokeWidth={3} />
             </Slider.PrevButton>
           </div>
           <div class="hidden relative sm:block z-10 col-start-3 row-start-3">
-            <Slider.NextButton class="btn btn-circle btn-outline absolute left-1/2 bg-base-100">
+            <Slider.NextButton class="border-black btn btn-circle btn-outline absolute left-0 bg-base-100">
               <Icon size={20} id="ChevronRight" strokeWidth={3} />
             </Slider.NextButton>
           </div>
